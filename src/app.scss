@@ -1,0 +1,61 @@
+.app {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 80vh;
+  background: url("./img/background.jpg");
+  background-position-y: -200px;
+  border-radius: 50px;
+  color: #fff;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  &__container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.form {
+  &__input {
+    width: 100px;
+    border: none;
+    padding: 10px;
+  }
+
+  &__button {
+    padding: 10px;
+    border: none;
+  }
+}
+
+.weather {
+  &__title {
+    font-size: 50px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+
+    > li {
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.548);
+      border-radius: 50%;
+      color: #000;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
