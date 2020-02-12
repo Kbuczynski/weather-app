@@ -1,18 +1,28 @@
-import React from "react";
+import React from 'react';
+import { Table } from 'react-bootstrap';
+import WeatherItem from "./WeatherItem";
 
 const WeatherInfo = props => {
-  const { data } = props;
+  const { data, deleteCity } = props;
 
-  return (
-    <div className="weather">
-      <h1 className="weather__title">{data.name}</h1>
-      <ul className="weather__list">
-        <li>{data.main.temp} ℃ </li>
-        <li>{data.wind.deg} m/s</li>
-        <li>{data.main.pressure} hPa</li>
-      </ul>
-    </div>
+  return ( 
+    <Table striped bordered hover variant="dark">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Temperature</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          data.map((city, index) => {
+            return <WeatherItem key={index} city={city} deleteCity={deleteCity}/>
+          })
+        }
+      </tbody>
+    </Table>
   );
-};
-
+}
+ 
 export default WeatherInfo;
