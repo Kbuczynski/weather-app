@@ -13,7 +13,7 @@ const WeatherItem = props => {
           <td>{temp} ℃</td>
           <td><Button variant="danger" value={id} onClick={deleteCity}>X</Button></td>
         </tr>
-     );
+    );
 }
  
 export default WeatherItem;

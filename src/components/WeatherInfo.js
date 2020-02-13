@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 import WeatherItem from "./WeatherItem";
+import { Table } from 'react-bootstrap';
 
 const WeatherInfo = props => {
   const { data, deleteCity } = props;
